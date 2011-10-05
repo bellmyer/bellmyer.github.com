@@ -1,0 +1,180 @@
+<html>
+<head>
+  <style>
+    #alphabet {
+      width: 600px;
+      margin: 24px auto;
+      text-align: center;
+    }
+    
+    #main {
+      width: 920px;
+      margin: 0px auto;
+    }
+    
+    #left,
+    #letter,
+    #right {
+      float: left;
+      margin: 0;
+    }
+    
+    #letter {
+      font-size: 300px; 
+      width: 400px; 
+      text-align: center; 
+      font-family: helvetica;
+    }
+    
+    #hint,
+    #down {
+      margin: 20px auto;
+      width: 500px;
+      text-align: center;
+    }
+    
+      #hint img {
+        height: 200px;
+      }
+    
+    #finish {
+      font-size: 24px; 
+      margin: 100px auto; 
+      width: 600px; 
+      text-align: center; 
+      font-family: helvetica;
+
+      display: none;
+    }
+    
+    #score {
+      font-size: 300px;
+      margin: 24px;
+    }
+  </style>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  
+  <script>
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    repeat  = 1;
+    penalty = 2;
+    letters = [];
+    current_letter = '';
+    score = 0;
+    total = 0;
+    
+    function initialize() {
+      alphabet = prompt('What letters would you like to practice?', alphabet);
+      repeat = prompt('How many times must be correct before it\'s no longer asked?', repeat);
+      penalty = prompt('How many extra times should a letter be asked when the anwer is wrong?', penalty);
+      
+      var base = '';
+      
+      for (var i = 0; i < repeat; i++) base += alphabet; 
+      
+      letters = base.split('');
+      
+      next();
+    }
+    
+    function default_image() {
+      $('#down').show();
+      $('#hint').hide();
+    }
+    
+    function hint_image() {
+      $('#down').hide();
+      $('#hint').show();
+    }
+    
+    function next() {
+      current_letter = letters[Math.floor(Math.random() * letters.length)];
+
+      default_image();
+      $('#hint img').attr('src', 'images/' + current_letter.toLowerCase() + '.png');
+
+      $('#alphabet').html(letters.length + ' to go');
+      $('#letter').html(current_letter);
+    }
+    
+    function finish() {
+      $(document).unbind();
+      $('#score').html(Math.round(score * 100 / total, 0));
+
+      $('#alphabet').hide();
+      $('#main').hide();
+      $('#down').hide();
+      $('#hint').hide();
+      $('#finish').show();
+    }
+    
+    function wrong_answer() {
+      for (var i = 0; i < penalty - 1; i++) letters.push(current_letter);
+      total++;
+      
+      next_question();
+    }
+    
+    function correct_answer() {
+      letters.splice(letters.indexOf(current_letter), 1);
+      total++;
+      score++;
+
+      next_question();
+    }
+    
+    function next_question() {
+      if (letters.length == 0)
+        finish();
+      else
+        next();
+    }
+    
+    function handle_key(event){
+      switch (event.which) {
+        case 37:
+          wrong_answer();
+          event.preventDefault();
+          break;
+        case 39:
+          correct_answer();
+          event.preventDefault();
+          break;
+        case 40:
+          hint_image();
+          event.preventDefault();
+          break;
+      }
+    }
+    
+    $(document).ready(function(){
+      initialize();
+      
+      $(document).keydown(handle_key);
+      $('#left').click(wrong_answer);
+      $('#right').click(correct_answer);
+      $('#down').click(hint_image);
+    });
+  </script>
+</head>
+<body>
+  
+  <div id="alphabet"></div>
+
+  <div id="main">
+    <div id="left"><img src="images/wrong.png"></div>
+    <div id="letter"></div>
+    <div id="right"><img src="images/correct.png"></div>
+  </div>
+  
+  <div id="down"><img src="images/hint.png"></div>
+  <div id="hint"><img src=""></div>
+  
+  <div id="finish">
+    <h2>Good Job!</h2>
+    <p>Your Score Is:</p>
+    <p id="score"></p>
+  </div>
+</body>
+</html>
