@@ -1,0 +1,163 @@
+.name-box {
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.scorebox {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  margin: 10px 0 10px 20px;
+}
+
+.pip {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 1px;
+  border: 1px solid #888;
+}
+
+.right {
+  text-align: right;
+}
+
+.spaced {
+  margin-left: 10px;
+}
+
+.distanced {
+  margin-left: 40px;
+}
+
+.bordered {
+  border: 1px solid black;
+}
+
+.overweight {
+  background: #f88;
+}
+
+.underweight {
+  background: #ff8;
+}
+
+.exact-weight {
+  background: #8f8;
+}
+
+.grayed {
+  background: #ccc;
+}
+
+.fitness-0  {  }
+.fitness-1  {  }
+.fitness-2  {  }
+.fitness-3  {  }
+.fitness-4  {  }
+.fitness-5  {  }
+.fitness-6  {  }
+.fitness-7  {  }
+.fitness-8  {  }
+.fitness-9  {  }
+.fitness-a  {  }
+.fitness-b  {  }
+.fitness-c  {  }
+.fitness-d  {  }
+.fitness-e  {  }
+.fitness-f  {  }
+.fitness-10 {  }
+
+.numeric {
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.options {
+  font-size: smaller;
+}
+
+.configuration {
+  background: #def;
+  padding: 20px;
+}
+
+.row-number {
+  display: inline-block;
+  width: 50px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.generation {
+  padding-bottom: 5px;
+  line-height: 0;
+}
+
+.alternate {
+  margin-top: 10px;
+}
+
+table.inputs td {
+  text-align: right;
+  padding: 0.3rem;
+}
+
+img.funny {
+  max-height: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+h1 {
+  border-bottom: 1px solid #ccc;
+}
+
+hr.menu {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input.numeric {
+  width: 60px;
+  display: inline;
+  height: calc(1.5rem + 2px);
+  padding: 0 .5rem;
+  font-size: 0.8rem;
+}
+
+input.numeric-short {
+  width: 40px;
+  display: inline;
+  height: calc(1.5rem + 2px);
+  padding: 0 .5rem;
+  font-size: 0.8rem;
+}
+
+label.numeric-input {
+  margin-bottom: 0;
+}
+
+select.inline-clean {
+  width: 25rem;
+  height: calc(1.5rem + 2px);
+  padding: 0 .75rem .1rem .5rem;
+  margin-left: 10px;
+}
+
+select.inline-short {
+  width: 120px;
+  display: inline;
+  height: calc(1.5rem + 2px);
+  padding: 0 .75rem .1rem .5rem;
+}
+
+#footer {
+  font-size: smaller;
+  text-align: center;
+}
+
+.input-list {
+  margin-top: 20px;
+}
