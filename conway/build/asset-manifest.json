@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/conway/static/css/main.7604df3a.chunk.css",
+    "main.js": "/conway/static/js/main.07739122.chunk.js",
+    "main.js.map": "/conway/static/js/main.07739122.chunk.js.map",
+    "runtime~main.js": "/conway/static/js/runtime~main.e57dd940.js",
+    "runtime~main.js.map": "/conway/static/js/runtime~main.e57dd940.js.map",
+    "static/css/2.bb4ba17c.chunk.css": "/conway/static/css/2.bb4ba17c.chunk.css",
+    "static/js/2.99f1936c.chunk.js": "/conway/static/js/2.99f1936c.chunk.js",
+    "static/js/2.99f1936c.chunk.js.map": "/conway/static/js/2.99f1936c.chunk.js.map",
+    "index.html": "/conway/index.html",
+    "precache-manifest.8922b1c1d575976961ae45176ae76c8c.js": "/conway/precache-manifest.8922b1c1d575976961ae45176ae76c8c.js",
+    "service-worker.js": "/conway/service-worker.js",
+    "static/css/2.bb4ba17c.chunk.css.map": "/conway/static/css/2.bb4ba17c.chunk.css.map",
+    "static/css/main.7604df3a.chunk.css.map": "/conway/static/css/main.7604df3a.chunk.css.map"
+  }
+}
