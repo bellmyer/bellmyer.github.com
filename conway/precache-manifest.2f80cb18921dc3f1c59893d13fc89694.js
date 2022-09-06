@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a2e313967ae063522a0022ef2bf69f98",
+    "revision": "2f5e170f81fdc5c13ca6d6d429c1cf9a",
     "url": "/conway/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/conway/static/css/2.bb4ba17c.chunk.css"
   },
   {
-    "revision": "4c0aaaa51ec2d7eb504c",
+    "revision": "b291a54d159c8b133166",
     "url": "/conway/static/css/main.7604df3a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/conway/static/js/2.99f1936c.chunk.js"
   },
   {
-    "revision": "4c0aaaa51ec2d7eb504c",
-    "url": "/conway/static/js/main.1196a02e.chunk.js"
+    "revision": "b291a54d159c8b133166",
+    "url": "/conway/static/js/main.4c8fe689.chunk.js"
   },
   {
     "revision": "820a45e2721fe91ad969",
